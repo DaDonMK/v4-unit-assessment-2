@@ -57,7 +57,6 @@ body{
     height: 170vh;
     width: 900px;
     top: 100px;
-    /* background-color: red; */
     left: 100px;
     display:flex;
     flex-direction: column;
@@ -65,12 +64,10 @@ body{
 }
 .skills-check-box{
     display: relative;
-    /* background-color: blue; */
     width:100%;
     margin-top:10px;
     height: 30px;
-    /* padding:5px; */
-    font-size: 30px;
+=    font-size: 30px;
 }
 p1{
     position: relative;
@@ -85,17 +82,14 @@ p2{
     padding-top: 10px;
     position: relative;
     top:5px;
-    /* background-color: lightblue; */
     width: 100%;
     height: 420px;
-    /* padding:5px; */
     font-size:20px;
 
 }
 .image-text-box{
     position: relative;
     top:20px;
-    /* background-color: green; */
     width:100%;
     display: flex;
 }
@@ -106,7 +100,6 @@ p2{
     width: 100%;
     height: 700px;
     top: 50px;
-    /* background-color: violet; */
     justify-content: space-evenly;
     flex-flow: wrap;
     
@@ -117,14 +110,12 @@ img{
 }
 
 .html{
-    /* position: relative; */
     top:50px;
     height:172px;
     width:250px;
 }
 
 .js{
-    /* position: relative; */
     top:50px;
     height:175px;
     width:250px;
@@ -143,7 +134,6 @@ img{
     width:250px
 }
 .right-section{
-    /* background-color: red; */
     top:100px;
     right:70px;
     position: relative;
@@ -155,7 +145,6 @@ img{
 
 .name-section{
     position: relative;
-    /* background-color: lightskyblue; */
     height: 40vh;
     width:100%;
     display: flex;
@@ -188,7 +177,6 @@ img{
 }
 .articles-box{
     position: absolute;
-    /* background-color: lightskyblue; */
     height: 55vh;
     width:100%;
     display: flex;
@@ -202,7 +190,6 @@ img{
     width:100%;
     position: absolute;
     height: 50px;
-    /* background-color: yellow; */
     top:0px;
     text-align: center;
     font-size: 20px;
@@ -213,7 +200,6 @@ img{
     width:100%;
     position: absolute;
     height: 400px;
-    /* background-color: purple; */
     top:50px;
     flex-direction: column;
 }
@@ -223,7 +209,6 @@ p3{
     padding-top:10px;
     width: 100%;
     height: 20px;
-    /* background-color:orange; */
     top:10px;
 }
 .footer{
@@ -237,13 +222,10 @@ p3{
 .learn{ 
     position: relative;
     padding-top: 15px;
-    /* padding-left: 30px; */
     left:40px;
     align-content: center;
     width:20%;
     height: 50%;
-    /* background-color: red; */
-    /* font-weight:bold; */
     font-size: 20px;
 }
 .circle{
@@ -254,7 +236,6 @@ p3{
     border-radius: 50%;
     height: 35px;
     width: 35px;
-    /* background-color: purple; */
     text-align: center;
     font-size: 30px;
 }

@@ -35,7 +35,10 @@ let foods = [
   and then adding the results together. 
 */
 
-//CODE HERE
+foods.forEach(function(element, index, array){
+  element.calroies = element.carbs*4 + element.fat*4 + element.protein*4
+})
+console.log(foods)
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -79,8 +82,11 @@ const products = [
   Using the map method, make a copy of your products array with the prices reduced by 25%. 
   Save the copy to a new variable called 'saleProducts'.
 */
+let saleProducts = 0
+products.map(function(element, index, array){
+   saleProducts = element.price = (element.price) - (element.price*0.25)
+})
 
-//CODE HERE
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -89,8 +95,14 @@ const products = [
   to a new variable called 'blueProducts'. 
   (Hint: look up the array method 'includes' on MDN)
 */
+let blueProducts = []
+products.filter(function(element, index, array){
 
-//CODE HERE
+  if(element.color.includes('blue')){
+    blueProducts.push(element)
+  }
+
+});
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -98,8 +110,10 @@ const products = [
   Use the reduce method to add up the prices of the blueProducts. 
   Save the result to a variable called orderTotal.
 */
-
-//CODE HERE
+let orderTotal = 0
+blueProducts.reduce(function(acc, curr){
+  orderTotal = orderTotal + curr.price
+}, 0)
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -129,8 +143,7 @@ const shippingInfo = {
   that combines the contactInfo and shippingInfo objects.
 */
 
-//CODE HERE
-
+let helensInfo = Object.assign(contactInfo, shippingInfo)
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -138,14 +151,15 @@ const shippingInfo = {
   Overwrite the name property to 'Ellen' and the email address to 'ellen@email.com'.
 */
 
-//CODE HERE
-
+let ellensInfo = {...helensInfo}
+ellensInfo.name = 'Ellen'
+ellensInfo.email = 'ellen@email.com'
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
-//CODE HERE
+const {email} = ellensInfo
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -153,7 +167,8 @@ const shippingInfo = {
   from shippingInfo to new variables using destructuring.
 */
 
-//CODE HERE
+let {zipCode, state} = ellensInfo
+
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -215,15 +230,14 @@ const userInfo = {
   using dot notation.
 */
 
-//CODE HERE
-
+let shouldAlert = userInfo.settings.alerts
 ////////////////////PROBLEM 10////////////////////
 /*
   Set the value of topic below to the last item in gn@rly_c0der_007's topics array
   using dot and/or bracket notation.
 */
 
-//CODE HERE
+let topic = userInfo.topics[3]
 
 ////////////////////PROBLEM 11////////////////////
 /*
@@ -231,7 +245,8 @@ const userInfo = {
   gn@rly_c0der_007's 2nd comment using dot/bracket notation.
 */
 
-//CODE HERE
+let commenterID = userInfo.comments[1].responses[0].userId
+console.log(commenterID)
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -250,7 +265,29 @@ const userInfo = {
       - create at least 2 kid objects
 */
 
-//CODE HERE
+let person = {
+  name: 'Mustafa',
+  age:22,
+  jobs:['WebDev Intern', 'Freelance'],
+  birthday: function(){
+    this.age += 1
+  },
+  favorties: {
+    color: 'red',
+    number: 100,
+    book: 'The Alchemist',
+    kids : [
+      {
+        name: 'Billy',
+        age: 10
+      },
+      {
+        name: 'Jenny',
+        age: 4
+      }
+    ]
+  }
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -276,7 +313,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,6 +326,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout
