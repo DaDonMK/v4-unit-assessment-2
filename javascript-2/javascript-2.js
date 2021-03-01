@@ -38,8 +38,7 @@ let foods = [
 foods.forEach(function(element, index, array){
   element.calroies = element.carbs*4 + element.fat*4 + element.protein*4
 })
-console.log(foods)
-
+// this works^
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -83,9 +82,13 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 let saleProducts = 0
-products.map(function(element, index, array){
-   saleProducts = element.price = (element.price) - (element.price*0.25)
+products.map(function(element){
+    element.price = (element.price) - (element.price*0.25)
+
 })
+saleProducts = products
+// console.log(saleProducts)
+// console.log(products)
 
 
 ////////////////////PROBLEM 3////////////////////

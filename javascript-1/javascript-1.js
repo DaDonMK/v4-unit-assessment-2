@@ -34,7 +34,6 @@ const savannah = ['lion', 'zebra', 'lion', 'giraffe']
 const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
 
 animals = [...forest, ...ocean, ...savannah, ...desert]
 /*
@@ -71,7 +70,7 @@ let compareNums = (num1, num2) => {
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-var bestMovie = ((title) =>  title + ' is the best movie ever!')
+var bestMovie = (title) =>  title + ' is the best movie ever!'
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -241,7 +240,7 @@ function Dog(name,age,breed,tricks){
 */
 
 
-var fido = Dog('Fido', 3, 'Jack Russell', 'sit')
+var fido = Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
 console.log(fido.tricks)
 
 ////////////////////PROBLEM 12////////////////////
@@ -304,7 +303,7 @@ function dogIntro(treat, toy){
 */
 
 let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])  
-console.log(F)
+console.log(fido)
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -319,7 +318,6 @@ function Phone(brand, model, storage, color, sold){
     this.storage=storage
     this.color=color
     this.sold=sold
-    return this
 }
   
 /*
