@@ -271,15 +271,16 @@ console.log(commenterID)
 let person = {
   name: 'Mustafa',
   age:22,
-  jobs:['WebDev Intern', 'Freelance'],
+  jobs:['WebDev Intern', 'Freelance', 'Random'],
   birthday: function(){
     this.age += 1
   },
-  favorties: {
+  favorites: {
     color: 'red',
     number: 100,
-    book: 'The Alchemist',
-    kids : [
+    book: 'The Alchemist'
+  },
+  kids : [
       {
         name: 'Billy',
         age: 10
@@ -290,8 +291,8 @@ let person = {
       }
     ]
   }
-}
 
+console.log(person.favorties)
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
   For the last two problems, you will be determining the 
