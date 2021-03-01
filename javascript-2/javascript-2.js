@@ -35,9 +35,9 @@ let foods = [
   and then adding the results together. 
 */
 
-foods.forEach(function(element, index, array){
-  element.calroies = element.carbs*4 + element.fat*4 + element.protein*4
-})
+foods.forEach(function(element){
+  element.calories = element.carbs*4 + element.fat*4 + element.protein*4
+});
 // this works^
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -170,7 +170,7 @@ const {email} = ellensInfo
   from shippingInfo to new variables using destructuring.
 */
 
-let {zipCode, state} = ellensInfo
+const {zipCode, state} = ellensInfo
 
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
@@ -247,9 +247,7 @@ let topic = userInfo.topics[3]
   Set the value of commenterId below to the userId of the first response to 
   gn@rly_c0der_007's 2nd comment using dot/bracket notation.
 */
-
 let commenterID = userInfo.comments[1].responses[0].userId
-console.log(commenterID)
 
 ////////////////////PROBLEM 12////////////////////
 /*

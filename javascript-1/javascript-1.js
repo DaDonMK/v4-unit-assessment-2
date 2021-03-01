@@ -98,7 +98,6 @@ let jsNinja = () => 'I am a JavaScript ninja!'
 */
 
 delete gameInfo.rating  
-console.log(gameInfo)
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -183,35 +182,22 @@ for(i = 0; i < classes.length; i++){
 const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']  
 let pairsArray = []
 //DO NOT EDIT CODE ABOVE
-
-let arr = [[],[],[],[],[]]
 let count = 0
-let count2 = 0
+let arr = [0,0]
 for(i = 0; i < lettersToPair.length; i++){
     for(j = i + 1; j < lettersToPair.length; j++){
-        if(lettersToPair[i] === lettersToPair[j]){
-            arr[count][count2] = (lettersToPair[i])
-            count2++
-            arr[count][count2] = (lettersToPair[i])
-            count2 = 0
-            count++
-
-
-
-            // arr.push(lettersToPair[i])
-            // arr.push(lettersToPair[j])
-
-            // // arr.splice(0,0, lettersToPair[i])
-            // // arr.splice(1,0,lettersToPair[j])
-            // // pairsArray.push(arr)
+        if(lettersToPair[j] === lettersToPair[i]){
+            arr.splice(0,1, i)
+            arr.splice(1,1, j)
+            pairsArray.push(arr)
+            // count ++
+            // pairsArray.splice(arr)
 
         }
-        
-        // j--
     }
 }
-// console.log(pairsArray)
 
+console.log(pairsArray)
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
     Problems 12-14 are all going to build off of problem 11. 
@@ -241,7 +227,6 @@ function Dog(name,age,breed,tricks){
 
 
 var fido = Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
-console.log(fido.tricks)
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -293,7 +278,7 @@ let teachStay = teachTrick.bind(fido, 'stay')
 function dogIntro(treat, toy){
     this.treat = treat
     this.toy = toy
-    return this.name + ' is a ' + this.breed + ' that loves' + this.treat + ' and their ' + this.toy
+    return this.name + ' is a ' + this.breed + ' that loves ' + this.treat + ' and their ' + this.toy
 }
 
 /*
@@ -303,7 +288,6 @@ function dogIntro(treat, toy){
 */
 
 let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])  
-console.log(fido)
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -346,9 +330,9 @@ function Phone(brand, model, storage, color, sold){
     Don't forget about the context of BRAND and MODEL.
 */
 
-Phone.prototype.sell = function(){
+Phone.prototype.sell = function(){ 
     this.sold = true
-    return this.brand + ' ' + this.model + ' has been sold'
+    return this.brand + ' ' + this.model + ' has been sold.'
 }
 
 console.log(phone1.sell())
