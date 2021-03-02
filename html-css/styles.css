@@ -160,7 +160,7 @@ img{
     width:250px;
     /* display:flex; */
     justify-content: center;
-    z-index:-1;
+    /* z-index:-1; */
 
 }
 
@@ -202,16 +202,16 @@ img{
     /* background-color: red; */
 }
 .articles-box{
-    position: absolute;
+    position: relative;
     height: 60vh;
     width:100%;
     display: flex;
     justify-content: center;
     box-shadow:0px 1px 15px 1px rgba(0,0,0,0.26);
     flex-direction: column;
-    top:375px;
-    /* background-color: red; */
+    top:40px;
     overflow: scroll;
+    /* background-color: red; */
 }
 #articles-name{
     padding-top:10px;
@@ -222,6 +222,7 @@ img{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    /* background-color: red; */
 }
 #articles-names-box{
     display:flex;
@@ -231,6 +232,10 @@ img{
     top:50px;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: scroll;
+    /* background-color: red; */
+    /* padding: 20px; */
+
     
 }
 ol{

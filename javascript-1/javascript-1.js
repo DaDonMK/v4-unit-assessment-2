@@ -278,7 +278,7 @@ let teachStay = teachTrick.bind(fido, 'stay')
 function dogIntro(treat, toy){
     this.treat = treat
     this.toy = toy
-    return this.name + ' is a ' + this.breed + ' that loves ' + this.treat + ' and their ' + this.toy
+    return this.name + ' is a ' + this.breed + ' that loves ' + this.treat + ' and their ' + this.toy + '!'
 }
 
 /*
@@ -288,6 +288,7 @@ function dogIntro(treat, toy){
 */
 
 let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])  
+console.log(fidoIntro)
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -335,5 +336,5 @@ Phone.prototype.sell = function(){
     return this.brand + ' ' + this.model + ' has been sold.'
 }
 
-console.log(phone1.sell())
+// console.log(phone1.sell())
   
